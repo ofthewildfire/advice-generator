@@ -1,0 +1,17 @@
+{
+  "name": "advice-generator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.0.19"
+  }
+}

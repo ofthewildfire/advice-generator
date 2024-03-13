@@ -1,0 +1,89 @@
+:root {
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope Variable';
+  font-weight: 800;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+  background-color: var(--DarkBlue);
+}
+
+#app {
+  background-color: var(--DarkGrayishBlue);
+  color: var(--LightCyan);
+  text-align: center;
+  padding: 2.5em;
+  border-radius: 10px;
+  max-width: 35rem;
+
+  display: grid;
+  gap: 2.5em;
+
+  position: relative;
+}
+
+.advice-num {
+  color: var(--NeonGreen);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.advice-fetch-btn {
+  background-color: var(--NeonGreen);
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+
+  transition: 0.5s box-shadow ease-in-out;
+}
+
+.advice-fetch-btn:is(:hover, :active) {
+  box-shadow: 0 0 25px var(--NeonGreen);
+  cursor: pointer;
+}
+
+.divider-desktop,
+.divider-mobile {
+  padding-bottom: 1em;
+}
+
+.divider-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 60rem) {
+  .divider-mobile {
+    display: none;
+  }
+
+  .divider-desktop {
+    display: block;
+  }
+}
