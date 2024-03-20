@@ -78,6 +78,9 @@ body {
   display: none;
 }
 
+
+/* Media query */
+
 @media screen and (min-width: 60rem) {
   .divider-mobile {
     display: none;

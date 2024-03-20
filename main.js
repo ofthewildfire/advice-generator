@@ -20,7 +20,9 @@ async function getAdvice() {
     adviceTextContainer.textContent = `“${data.slip.advice}”`;
     value = data;
   } catch (error) {
-    console.log(error);
+    adviceIdText.textContent = "Error"; 
+    adviceTextContainer.textContent = `${error}`
+    console.log(error)
   }
 }
 
